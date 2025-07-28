@@ -22,7 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     } else {
-        header('Location: ../view/inscription.tpl.php');
-        exit;
+        if ($password !== $passwordConfirm) {
+            header('Location: ../view/inscription.tpl.php?error=1');
+            exit;
+
+
+        } else {
+            header('Location: ../view/inscription.tpl.php?error=2 ');
+            exit;
+
+
+        }
     }
 }

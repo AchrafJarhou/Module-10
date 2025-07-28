@@ -1,3 +1,9 @@
+<?php
+$messageError = [
+    1 => "votre inscription a echoué vos mots de passes ne sont pas identique",
+    2 => "votre inscription a echoué votre mot de passe doit avoir plus de 8 caractere"
+]
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,6 +12,10 @@
     <title>inscription</title>
 </head>
 <body>
+      <?php if (isset($_GET['error'])) :?>
+        <p><?=$messageError[$_GET['error']]  ?></p>
+    <?php endif ?>
+    
     <form action="../Controller/inscription.php" method="post">
         <label for="email">Email</label>
         <input type="email" name="email" id="email">

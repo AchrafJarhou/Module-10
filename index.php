@@ -1,8 +1,6 @@
 <?php
 session_start();
-
-
-
+$message = [1 => "votre conexion a echoué",2 => "votre email nest pas corect"];
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +15,7 @@ session_start();
         <p><?=$_SESSION['error'] ?></p>
     <?php endif ?>
     <?php if (isset($_GET['error'])) :?>
-        <p><?= $_GET['error'] ?></p>
+        <p><?= $message[$_GET['error']] ?></p>
     <?php endif ?>
     <form action="Controller/login.php" method="post">
         <label for="email">Email</label>
