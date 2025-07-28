@@ -23,7 +23,7 @@ $messageError = [
         <input type="email" name="email" id="email">
          <label for="password">Mot de passe</label>
         <input type="password" name="password" id="password">
-          <label for="passwordConfirm">confirmé mot de passe</label>
+          <label for="passwordConfirm">confirmez mot de passe</label>
         <input type="password" name="passwordConfirm" id="passwordConfirm">
         <button type="submit">envoyer</button>     
 
