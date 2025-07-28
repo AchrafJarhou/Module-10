@@ -9,6 +9,7 @@ $message = [1 => "votre conexion a echoué",2 => "votre email nest pas corect"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>conexion</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
       <?php if (isset($_SESSION['error'])) :?>
@@ -18,10 +19,14 @@ $message = [1 => "votre conexion a echoué",2 => "votre email nest pas corect"];
         <p><?= $message[$_GET['error']] ?></p>
     <?php endif ?>
     <form action="Controller/login.php" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-         <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password">   
+       <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+       </div>
+       <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">  
+       </div> 
         <button type="submit">conexion</button>     
     </form>
 

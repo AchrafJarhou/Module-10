@@ -22,6 +22,8 @@ var_dump($users);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dashboard</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+
 </head>
 <body>
     <?php if (!isset($_SESSION['user'])) :?>
@@ -33,7 +35,7 @@ var_dump($users);
         ?>
         <?php endif ?>
         
-    <button type="submit"><a href="./logout.tpl.php">deconexion</a></button>
+    <button id="button" type="submit"><a id="dexonexion" href="./logout.tpl.php">deconexion</a></button>
     <ul>
         <?php foreach ($users as $user):?>
         <li><?= $user['email'] ?></li>
